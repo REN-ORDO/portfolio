@@ -1,0 +1,34 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  
+  body {
+    @apply bg-obsidian text-white font-inter antialiased;
+    background-image: 
+      radial-gradient(at 0% 0%, rgba(59, 130, 246, 0.1) 0px, transparent 50%),
+      radial-gradient(at 100% 100%, rgba(139, 92, 246, 0.1) 0px, transparent 50%);
+  }
+}
+
+@layer utilities {
+  .glass {
+    @apply bg-white/5 backdrop-blur-md border border-white/10;
+  }
+  
+  .glass-hover {
+    @apply transition-all duration-300 hover:bg-white/10 hover:border-white/20;
+  }
+  
+  .gradient-text {
+    @apply bg-gradient-to-r from-cyber-blue via-neural-violet to-accent-cyan bg-clip-text text-transparent;
+  }
+  
+  .glow-border {
+    @apply border border-cyber-blue/50 shadow-[0_0_15px_rgba(59,130,246,0.3)];
+  }
+}
