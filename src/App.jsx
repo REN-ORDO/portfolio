@@ -1,99 +1,111 @@
 import { Github, Linkedin, Twitter, Dribbble, Mail, Moon, ExternalLink, Code2, Briefcase } from 'lucide-react';
+import {
+    SiNextdotjs,
+    SiReact,
+    SiTypescript,
+    SiTailwindcss,
+    SiSupabase,
+    SiYoutube,
+    SiNodedotjs,
+    SiPython,
+    SiHtml5,
+    SiCss3,
+    SiJavascript,
+    SiFirebase
+} from 'react-icons/si';
 import './index.css';
 
 function App() {
     const projects = [
         {
-            name: 'SkinaMC',
-            description: 'A platform to search for Minecraft skins, edit, convert and download them.',
+            name: 'DerbiPlay',
+            description: 'Plataforma PWA para gestión de partidos de fútbol con gamificación y sistema de niveles.',
             image: '/project1.jpg',
             tech: [
-                { name: 'N', icon: 'N', color: 'bg-gray-800' },
-                { name: 'React', icon: '⚛', color: 'bg-cyan-500' },
-                { name: 'TS', icon: 'TS', color: 'bg-blue-600' },
-                { name: 'Tailwind', icon: '🌊', color: 'bg-cyan-400' },
-                { name: 'Supabase', icon: '⚡', color: 'bg-green-500' },
+                { Icon: SiNextdotjs, color: 'bg-gray-800', name: 'Next.js' },
+                { Icon: SiReact, color: 'bg-cyan-500', name: 'React' },
+                { Icon: SiTypescript, color: 'bg-blue-600', name: 'TypeScript' },
+                { Icon: SiTailwindcss, color: 'bg-cyan-400', name: 'Tailwind' },
+                { Icon: SiFirebase, color: 'bg-yellow-500', name: 'Firebase' },
             ],
-            live: 'https://skinamc.com',
-            code: null,
+            live: 'https://derbiplay.vercel.app',
+            code: 'https://github.com/tuusuario/derbiplay',
         },
         {
-            name: 'Music App',
-            description: 'Play, create playlists, like songs and discover music trends.',
+            name: 'Genkit Slack Bot',
+            description: 'Bot inteligente para Slack con integración de Genkit y capacidades de IA conversacional.',
             image: '/project2.jpg',
             tech: [
-                { name: 'N', icon: 'N', color: 'bg-gray-800' },
-                { name: 'React', icon: '⚛', color: 'bg-cyan-500' },
-                { name: 'TS', icon: 'TS', color: 'bg-blue-600' },
-                { name: 'Tailwind', icon: '🌊', color: 'bg-cyan-400' },
-                { name: 'YouTube', icon: '▶', color: 'bg-red-600' },
+                { Icon: SiNodedotjs, color: 'bg-green-600', name: 'Node.js' },
+                { Icon: SiTypescript, color: 'bg-blue-600', name: 'TypeScript' },
+                { Icon: SiFirebase, color: 'bg-yellow-500', name: 'Firebase' },
             ],
-            live: 'https://example.com',
-            code: 'https://github.com',
+            live: null,
+            code: 'https://github.com/tuusuario/genkit-slack-bot',
         },
         {
-            name: 'CraftyMania',
-            description: 'Minecraft server management platform for administrators and players.',
+            name: 'AI Dashboard',
+            description: 'Dashboard interactivo para visualización de métricas de modelos de IA y análisis de datos.',
             image: '/project3.jpg',
             tech: [
-                { name: 'React', icon: '⚛', color: 'bg-cyan-500' },
-                { name: 'Node', icon: '🟢', color: 'bg-green-600' },
+                { Icon: SiReact, color: 'bg-cyan-500', name: 'React' },
+                { Icon: SiPython, color: 'bg-blue-500', name: 'Python' },
+                { Icon: SiTypescript, color: 'bg-blue-600', name: 'TypeScript' },
             ],
             live: 'https://example.com',
-            code: null,
+            code: 'https://github.com/tuusuario/ai-dashboard',
         },
         {
-            name: 'MC-auto-clicker',
-            description: 'Auto clicker developed for Minecraft.',
+            name: 'Portfolio Builder',
+            description: 'Generador de portfolios personalizados.',
             tech: [
-                { name: 'Python', icon: '🐍', color: 'bg-blue-500' },
-                { name: 'PyQt5', icon: '📦', color: 'bg-green-500' },
+                { Icon: SiReact, color: 'bg-cyan-500', name: 'React' },
+                { Icon: SiTailwindcss, color: 'bg-cyan-400', name: 'Tailwind' },
             ],
             code: 'https://github.com',
         },
         {
-            name: 'Kitchen Display System (KDS)',
-            description: 'Kitchen management system for restaurants.',
+            name: 'Task Manager',
+            description: 'Sistema de gestión de tareas y proyectos.',
             tech: [
-                { name: 'React', icon: '⚛', color: 'bg-cyan-500' },
-                { name: 'Node', icon: '🟢', color: 'bg-green-600' },
+                { Icon: SiNextdotjs, color: 'bg-gray-800', name: 'Next.js' },
+                { Icon: SiFirebase, color: 'bg-yellow-500', name: 'Firebase' },
             ],
             code: 'https://github.com',
         },
         {
-            name: 'Ticket.me',
-            description: 'Ticket management system.',
+            name: 'Weather App',
+            description: 'Aplicación del clima con pronósticos.',
             tech: [
-                { name: 'React', icon: '⚛', color: 'bg-cyan-500' },
-                { name: 'Firebase', icon: '🔥', color: 'bg-yellow-500' },
+                { Icon: SiReact, color: 'bg-cyan-500', name: 'React' },
+                { Icon: SiJavascript, color: 'bg-yellow-500', name: 'JavaScript' },
             ],
             code: 'https://github.com',
         },
         {
-            name: 'Movie Searcher',
-            description: 'Search and discover movies.',
+            name: 'E-commerce',
+            description: 'Tienda online con carrito de compras.',
             tech: [
-                { name: 'React', icon: '⚛', color: 'bg-cyan-500' },
-                { name: 'API', icon: '🔌', color: 'bg-purple-500' },
+                { Icon: SiNextdotjs, color: 'bg-gray-800', name: 'Next.js' },
+                { Icon: SiTypescript, color: 'bg-blue-600', name: 'TypeScript' },
             ],
             code: 'https://github.com',
         },
         {
-            name: 'Password generator',
-            description: 'Generate secure passwords.',
+            name: 'Blog Platform',
+            description: 'Plataforma de blogs con CMS.',
             tech: [
-                { name: 'HTML', icon: 'H', color: 'bg-orange-600' },
-                { name: 'CSS', icon: 'C', color: 'bg-blue-500' },
-                { name: 'JS', icon: 'JS', color: 'bg-yellow-500' },
+                { Icon: SiReact, color: 'bg-cyan-500', name: 'React' },
+                { Icon: SiNodedotjs, color: 'bg-green-600', name: 'Node.js' },
             ],
             code: 'https://github.com',
         },
         {
-            name: 'Pokedex',
-            description: 'Pokemon information platform.',
+            name: 'Chat App',
+            description: 'Aplicación de mensajería en tiempo real.',
             tech: [
-                { name: 'React', icon: '⚛', color: 'bg-cyan-500' },
-                { name: 'API', icon: '🔌', color: 'bg-red-500' },
+                { Icon: SiReact, color: 'bg-cyan-500', name: 'React' },
+                { Icon: SiFirebase, color: 'bg-yellow-500', name: 'Firebase' },
             ],
             code: 'https://github.com',
         },
@@ -175,8 +187,12 @@ function App() {
                                     {/* Tech Icons */}
                                     <div className="flex gap-2 mb-4">
                                         {project.tech.map((tech, i) => (
-                                            <div key={i} className={`w-8 h-8 rounded ${tech.color} flex items-center justify-center text-white text-xs font-bold`}>
-                                                {tech.icon}
+                                            <div
+                                                key={i}
+                                                className={`w-8 h-8 rounded ${tech.color} flex items-center justify-center text-white`}
+                                                title={tech.name}
+                                            >
+                                                <tech.Icon className="w-5 h-5" />
                                             </div>
                                         ))}
                                     </div>
@@ -219,8 +235,12 @@ function App() {
                                 {/* Tech Icons */}
                                 <div className="flex gap-2 mb-4">
                                     {project.tech.map((tech, i) => (
-                                        <div key={i} className={`w-7 h-7 rounded ${tech.color} flex items-center justify-center text-white text-xs font-bold`}>
-                                            {tech.icon}
+                                        <div
+                                            key={i}
+                                            className={`w-7 h-7 rounded ${tech.color} flex items-center justify-center text-white`}
+                                            title={tech.name}
+                                        >
+                                            <tech.Icon className="w-4 h-4" />
                                         </div>
                                     ))}
                                 </div>
