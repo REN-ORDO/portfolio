@@ -8,20 +8,25 @@ function App() {
             description: 'A platform to search for Minecraft skins, edit, convert and download them.',
             image: '/project1.jpg',
             tech: [
-                { name: 'Next.js', color: 'bg-gray-700' },
-                { name: 'TypeScript', color: 'bg-blue-600' },
+                { name: 'N', icon: 'N', color: 'bg-gray-800' },
+                { name: 'React', icon: '⚛', color: 'bg-cyan-500' },
+                { name: 'TS', icon: 'TS', color: 'bg-blue-600' },
+                { name: 'Tailwind', icon: '🌊', color: 'bg-cyan-400' },
+                { name: 'Supabase', icon: '⚡', color: 'bg-green-500' },
             ],
             live: 'https://skinamc.com',
             code: null,
         },
         {
             name: 'Music App',
-            description: 'Play created with HTML, CSS and JS.',
+            description: 'Play, create playlists, like songs and discover music trends.',
             image: '/project2.jpg',
             tech: [
-                { name: 'HTML', color: 'bg-orange-600' },
-                { name: 'CSS', color: 'bg-blue-500' },
-                { name: 'JavaScript', color: 'bg-yellow-500' },
+                { name: 'N', icon: 'N', color: 'bg-gray-800' },
+                { name: 'React', icon: '⚛', color: 'bg-cyan-500' },
+                { name: 'TS', icon: 'TS', color: 'bg-blue-600' },
+                { name: 'Tailwind', icon: '🌊', color: 'bg-cyan-400' },
+                { name: 'YouTube', icon: '▶', color: 'bg-red-600' },
             ],
             live: 'https://example.com',
             code: 'https://github.com',
@@ -31,8 +36,8 @@ function App() {
             description: 'Minecraft server management platform for administrators and players.',
             image: '/project3.jpg',
             tech: [
-                { name: 'React', color: 'bg-cyan-500' },
-                { name: 'Node.js', color: 'bg-green-600' },
+                { name: 'React', icon: '⚛', color: 'bg-cyan-500' },
+                { name: 'Node', icon: '🟢', color: 'bg-green-600' },
             ],
             live: 'https://example.com',
             code: null,
@@ -41,8 +46,8 @@ function App() {
             name: 'MC-auto-clicker',
             description: 'Auto clicker developed for Minecraft.',
             tech: [
-                { name: 'Python', color: 'bg-blue-500' },
-                { name: 'PyQt5', color: 'bg-green-500' },
+                { name: 'Python', icon: '🐍', color: 'bg-blue-500' },
+                { name: 'PyQt5', icon: '📦', color: 'bg-green-500' },
             ],
             code: 'https://github.com',
         },
@@ -50,8 +55,8 @@ function App() {
             name: 'Kitchen Display System (KDS)',
             description: 'Kitchen management system for restaurants.',
             tech: [
-                { name: 'React', color: 'bg-cyan-500' },
-                { name: 'Node.js', color: 'bg-green-600' },
+                { name: 'React', icon: '⚛', color: 'bg-cyan-500' },
+                { name: 'Node', icon: '🟢', color: 'bg-green-600' },
             ],
             code: 'https://github.com',
         },
@@ -59,8 +64,8 @@ function App() {
             name: 'Ticket.me',
             description: 'Ticket management system.',
             tech: [
-                { name: 'React', color: 'bg-cyan-500' },
-                { name: 'Firebase', color: 'bg-yellow-500' },
+                { name: 'React', icon: '⚛', color: 'bg-cyan-500' },
+                { name: 'Firebase', icon: '🔥', color: 'bg-yellow-500' },
             ],
             code: 'https://github.com',
         },
@@ -68,8 +73,8 @@ function App() {
             name: 'Movie Searcher',
             description: 'Search and discover movies.',
             tech: [
-                { name: 'React', color: 'bg-cyan-500' },
-                { name: 'API', color: 'bg-purple-500' },
+                { name: 'React', icon: '⚛', color: 'bg-cyan-500' },
+                { name: 'API', icon: '🔌', color: 'bg-purple-500' },
             ],
             code: 'https://github.com',
         },
@@ -77,9 +82,9 @@ function App() {
             name: 'Password generator',
             description: 'Generate secure passwords.',
             tech: [
-                { name: 'HTML', color: 'bg-orange-600' },
-                { name: 'CSS', color: 'bg-blue-500' },
-                { name: 'JS', color: 'bg-yellow-500' },
+                { name: 'HTML', icon: 'H', color: 'bg-orange-600' },
+                { name: 'CSS', icon: 'C', color: 'bg-blue-500' },
+                { name: 'JS', icon: 'JS', color: 'bg-yellow-500' },
             ],
             code: 'https://github.com',
         },
@@ -87,8 +92,8 @@ function App() {
             name: 'Pokedex',
             description: 'Pokemon information platform.',
             tech: [
-                { name: 'React', color: 'bg-cyan-500' },
-                { name: 'PokeAPI', color: 'bg-red-500' },
+                { name: 'React', icon: '⚛', color: 'bg-cyan-500' },
+                { name: 'API', icon: '🔌', color: 'bg-red-500' },
             ],
             code: 'https://github.com',
         },
@@ -153,32 +158,39 @@ function App() {
                         Projects
                     </h2>
 
-                    {/* Featured Projects */}
-                    <div className="space-y-6 mb-6">
+                    {/* Featured Projects - Horizontal Layout */}
+                    <div className="space-y-4 mb-6">
                         {projects.slice(0, 3).map((project, index) => (
-                            <div key={index} className="project-card">
-                                <div className="h-48 bg-gradient-to-br from-gray-700 to-gray-800 flex items-center justify-center">
+                            <div key={index} className="project-card flex overflow-hidden">
+                                {/* Project Image - Left Side */}
+                                <div className="w-2/5 bg-gradient-to-br from-gray-700 to-gray-800 flex items-center justify-center flex-shrink-0">
                                     <div className="text-6xl opacity-30">🚀</div>
                                 </div>
-                                <div className="p-5">
-                                    <h3 className="text-xl font-bold mb-2">{project.name}</h3>
-                                    <p className="text-gray-400 text-sm mb-4">{project.description}</p>
-                                    <div className="flex flex-wrap gap-2 mb-4">
+
+                                {/* Project Content - Right Side */}
+                                <div className="flex-1 p-6 flex flex-col">
+                                    <h3 className="text-2xl font-bold mb-3">{project.name}</h3>
+                                    <p className="text-gray-400 text-sm mb-4 flex-1">{project.description}</p>
+
+                                    {/* Tech Icons */}
+                                    <div className="flex gap-2 mb-4">
                                         {project.tech.map((tech, i) => (
-                                            <span key={i} className={`tech-badge ${tech.color} text-white`}>
-                                                {tech.name}
-                                            </span>
+                                            <div key={i} className={`w-8 h-8 rounded ${tech.color} flex items-center justify-center text-white text-xs font-bold`}>
+                                                {tech.icon}
+                                            </div>
                                         ))}
                                     </div>
+
+                                    {/* Action Buttons */}
                                     <div className="flex gap-2">
                                         {project.live && (
                                             <a
                                                 href={project.live}
                                                 target="_blank"
                                                 rel="noopener noreferrer"
-                                                className="inline-flex items-center gap-1 bg-white text-gray-900 px-4 py-2 rounded-lg text-sm font-medium hover:bg-gray-200 transition-colors"
+                                                className="inline-flex items-center gap-2 bg-white text-gray-900 px-4 py-2 rounded-lg text-sm font-semibold hover:bg-gray-200 transition-colors"
                                             >
-                                                LIVE <ExternalLink className="w-3 h-3" />
+                                                Live <ExternalLink className="w-4 h-4" />
                                             </a>
                                         )}
                                         {project.code && (
@@ -186,9 +198,9 @@ function App() {
                                                 href={project.code}
                                                 target="_blank"
                                                 rel="noopener noreferrer"
-                                                className="inline-flex items-center gap-1 bg-gray-700 text-white px-4 py-2 rounded-lg text-sm font-medium hover:bg-gray-600 transition-colors"
+                                                className="inline-flex items-center gap-2 bg-gray-700 text-white px-4 py-2 rounded-lg text-sm font-semibold hover:bg-gray-600 transition-colors"
                                             >
-                                                CODE
+                                                Code
                                             </a>
                                         )}
                                     </div>
@@ -200,24 +212,27 @@ function App() {
                     {/* Small Projects Grid */}
                     <div className="grid grid-cols-2 gap-4">
                         {projects.slice(3).map((project, index) => (
-                            <div key={index} className="project-card p-4">
-                                <h3 className="font-semibold mb-2 text-sm">{project.name}</h3>
-                                <p className="text-gray-400 text-xs mb-3">{project.description}</p>
-                                <div className="flex flex-wrap gap-1 mb-3">
+                            <div key={index} className="project-card p-5">
+                                <h3 className="font-bold mb-2 text-base">{project.name}</h3>
+                                <p className="text-gray-400 text-sm mb-4">{project.description}</p>
+
+                                {/* Tech Icons */}
+                                <div className="flex gap-2 mb-4">
                                     {project.tech.map((tech, i) => (
-                                        <span key={i} className={`tech-badge ${tech.color} text-white text-xs`}>
-                                            {tech.name}
-                                        </span>
+                                        <div key={i} className={`w-7 h-7 rounded ${tech.color} flex items-center justify-center text-white text-xs font-bold`}>
+                                            {tech.icon}
+                                        </div>
                                     ))}
                                 </div>
+
                                 {project.code && (
                                     <a
                                         href={project.code}
                                         target="_blank"
                                         rel="noopener noreferrer"
-                                        className="inline-flex items-center gap-1 bg-gray-700 text-white px-3 py-1.5 rounded-lg text-xs font-medium hover:bg-gray-600 transition-colors"
+                                        className="inline-flex items-center gap-1 bg-gray-700 text-white px-4 py-2 rounded-lg text-sm font-semibold hover:bg-gray-600 transition-colors"
                                     >
-                                        CODE
+                                        Code
                                     </a>
                                 )}
                             </div>
