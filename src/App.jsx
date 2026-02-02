@@ -127,7 +127,7 @@ function App() {
                         <img
                             src="/profile.png"
                             alt="Sebastián González"
-                            className="w-20 h-20 rounded-full profile-shadow flex-shrink-0 object-cover"
+                            className="w-30 h-30 rounded-full profile-shadow flex-shrink-0 object-cover"
                         />
                         <div className="flex-1">
                             <h1 className="text-3xl font-bold mb-1">Sebastián González</h1>
