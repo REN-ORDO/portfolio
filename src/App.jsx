@@ -124,9 +124,11 @@ function App() {
                 {/* Profile Section */}
                 <div className="mb-12">
                     <div className="flex items-start gap-6 mb-6">
-                        <div className="w-20 h-20 rounded-full bg-gradient-to-br from-green-400 to-blue-500 flex items-center justify-center text-2xl font-bold profile-shadow flex-shrink-0">
-                            SG
-                        </div>
+                        <img
+                            src="/profile.png"
+                            alt="Sebastián González"
+                            className="w-20 h-20 rounded-full profile-shadow flex-shrink-0 object-cover"
+                        />
                         <div className="flex-1">
                             <h1 className="text-3xl font-bold mb-1">Sebastián González</h1>
                             <p className="text-gray-400 mb-4">
