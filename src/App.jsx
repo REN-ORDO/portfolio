@@ -113,7 +113,7 @@ function App() {
 
     return (
         <div className="min-h-screen bg-[#1f2937] text-white">
-            <div className="max-w-2xl mx-auto px-6 py-12">
+            <div className="max-w-[48rem] mx-auto px-6 py-12">
                 {/* Theme Toggle */}
                 <div className="flex justify-end mb-8">
                     <button className="p-2 rounded-lg bg-gray-800 hover:bg-gray-700 transition-colors">
