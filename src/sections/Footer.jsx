@@ -29,21 +29,21 @@ export function Footer() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, margin: '-10% 0px' }}
                 transition={{ duration: 0.7 }}
-                className="card-3d bg-[var(--color-paper)] p-8 md:p-12"
+                className="card-3d overflow-hidden bg-[var(--color-paper)] p-5 sm:p-8 md:p-12"
             >
                 <motion.button
                     whileHover={{ scale: 1.01 }}
                     whileTap={{ scale: 0.99 }}
                     onClick={copyEmail}
-                    className="group flex w-full items-center justify-between gap-4 text-left"
+                    className="group flex w-full flex-col items-start gap-4 text-left sm:flex-row sm:items-center sm:justify-between"
                 >
                     <span
-                        className="font-display text-3xl md:text-5xl tracking-tight italic text-[var(--color-ink)] underline decoration-[var(--color-tangerine)] decoration-2 underline-offset-[6px]"
+                        className="block w-full min-w-0 max-w-full overflow-hidden whitespace-nowrap font-display text-[clamp(0.85rem,4.4vw,1.1rem)] sm:text-3xl md:text-5xl tracking-tight italic text-[var(--color-ink)] underline decoration-[var(--color-tangerine)] decoration-2 underline-offset-[4px] sm:underline-offset-[6px]"
                         style={{ fontVariationSettings: "'opsz' 144, 'wght' 500" }}
                     >
                         {EMAIL}
                     </span>
-                    <span className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full border-2 border-[var(--color-ink)] bg-[var(--color-tangerine)] text-[var(--color-paper)] shadow-[0_4px_0_-1px_var(--color-ink)] group-hover:rotate-12 transition-transform">
+                    <span className="flex h-11 w-11 sm:h-12 sm:w-12 shrink-0 items-center justify-center self-end sm:self-auto rounded-full border-2 border-[var(--color-ink)] bg-[var(--color-tangerine)] text-[var(--color-paper)] shadow-[0_4px_0_-1px_var(--color-ink)] group-hover:rotate-12 transition-transform">
                         <AnimatePresence mode="wait">
                             {copied ? (
                                 <motion.span key="c" initial={{ scale: 0 }} animate={{ scale: 1 }} exit={{ scale: 0 }}>
